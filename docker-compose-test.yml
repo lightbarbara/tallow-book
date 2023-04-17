@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres
+    container_name: db
+    env_file:
+      - tallow-book-back/.env.tes
+    ports:
+      - 5433:5432
+
+  node:
+    container_name: node
+    build: ./tallow-book-back
+    ports:
+      - 1234:5000
+    env_file:
+      - tallow-book-back/.env.test
+    depends_on:
+      - db
