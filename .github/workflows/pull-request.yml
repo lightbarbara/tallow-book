@@ -9,11 +9,11 @@ jobs:
       - name: Make a new .env file
         uses: SpicyPizza/create-envfile@v1.3.1
         with:
-          envkey_PORT: 5000
-          envkey_POSTGRES_PASSWORD: 1234567890
-          envkey_POSTGRES_USER: "postgres"
-          envkey_POSTGRES_DB: "books-test"
-          envkey_DATABASE_URL: "postgresql://postgres:1234567890@db:5432/books-test?schema=public"
+          envkey_PORT: ${{secrets.PORT}}
+          envkey_POSTGRES_PASSWORD: ${{secrets.POSTGRES_PASSWORD}}
+          envkey_POSTGRES_USER: ${{secrets.POSTGRES_USER}}
+          envkey_POSTGRES_DB: ${{secrets.POSTGRES_DB_TEST}}
+          envkey_DATABASE_URL: ${{secrets.DATABASE_URL_TEST}}
           directory: tallow-book-back
           file_name: .env.test
       - name: Run tests
