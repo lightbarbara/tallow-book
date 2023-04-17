@@ -1,0 +1,6 @@
+[submodule "tallow-book-front"]
+	path = tallow-book-front
+	url = https://github.com/lightbarbara/tallow-book-front
+[submodule "tallow-book-back"]
+	path = tallow-book-back
+	url = https://github.com/lightbarbara/tallow-book-back
