@@ -3,7 +3,7 @@ services:
     image: postgres
     container_name: db
     env_file:
-      - tallow-book-back/.env.tes
+      - tallow-book-back/.env.test
     ports:
       - 5433:5432
 
