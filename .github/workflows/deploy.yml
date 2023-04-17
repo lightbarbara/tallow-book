@@ -5,7 +5,7 @@ on:
 name: Build and Deploy on AWS
 jobs:
   build:
-    runs on: self-hosted
+    runs-on: self-hosted
     timeout-minutes: 10
     steps:
       - name: Checkout
