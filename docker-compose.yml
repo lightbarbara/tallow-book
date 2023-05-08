@@ -14,7 +14,7 @@ services:
     container_name: node
     build: ./tallow-book-back
     ports:
-      - 1234:5000
+      - 5000:5000
     env_file:
       - tallow-book-back/.env
     depends_on:
@@ -25,7 +25,6 @@ services:
     build: ./tallow-book-front
     volumes:
       - react-volume:/var/www/html
-    stdin_open: true
 
   nginx:
     container_name: nginx
